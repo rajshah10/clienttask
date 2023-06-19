@@ -4,7 +4,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import { data } from '../constants';
-import { Checkbox } from '@mui/material';
 import CheckComponent from '../ui/CheckComponent';
 import Summary from '../ui/Summary';
 const Sidebar = () => {
@@ -41,65 +40,56 @@ const Sidebar = () => {
                             <AccordionDetails style={{ background: "#0F1332" }}>
                                 <div className='expand'>
                                     <div className='flexCol'>
-                                        {sampledata.nodes[0].nodes[0]?.nodes?.length === 0 ?
-                                            sampledata.nodes[0].nodes.map((innerData, innerIndex) => (
+                                        {sampledata.nodes[0].nodes[0]?.nodes?.length === 0
+                                            ? sampledata.nodes[0].nodes.map((innerData, innerIndex) => (
                                                 <CheckComponent data={innerData} index={innerIndex} />
-                                            )) :
-                                            sampledata.nodes[0]?.nodes?.map((data, innerInd) => (
+                                            ))
+                                            : sampledata.nodes[0]?.nodes?.map((data, innerInd) => (
                                                 <Accordion
                                                     expanded={childPanles.includes(innerInd)}
-                                                    onChange={() => handlePanelClick(innerInd, childPanles, setChildPanels)
-                                                    }
+                                                    onChange={() => handlePanelClick(innerInd, childPanles, setChildPanels)}
                                                     style={{
-                                                        background: expandedPanels.includes(innerInd) ? "#0F1332" : "#0F1332", color: "white", boxShadow: 'none', borderRadius: "0",
+                                                        background: expandedPanels.includes(innerInd) ? "#0F1332" : "#0F1332",
+                                                        color: "white",
+                                                        boxShadow: 'none',
+                                                        borderRadius: "0",
                                                     }}
                                                 >
                                                     <Summary data={data} index={innerInd} />
                                                     <AccordionDetails>
                                                         <div className='expand'>
                                                             <div className='flexCol'>
-                                                                {data.nodes.length === 0 ?
+                                                                {data.nodes.length === 0 ? null : (
                                                                     <>
                                                                         {data.nodes.map((data, index) => (
-                                                                            <div style={{ height: "32px" }}>
-                                                                                <Checkbox size="small" style={{ color: "white" }} />
-                                                                                <span key={index}>
-                                                                                    {data?.label}
-                                                                                </span>
-                                                                            </div>
-                                                                        ))}
-                                                                    </> : <>
-                                                                        {
-                                                                            data.nodes.map((data, index) => (
-                                                                                <Accordion
-                                                                                    expanded={innerChildPanels.includes(index)}
-                                                                                    onChange={() => handlePanelClick(index, innerChildPanels, setInnerChildPanels)
-                                                                                    }
-                                                                                    style={{
-                                                                                        background: innerChildPanels.includes(index) ? "#0F1332" : "#0F1332", color: "white", boxShadow: 'none', borderRadius: "0",
-                                                                                    }}
-
-                                                                                >
-                                                                                    <Summary data={data} index={index} />
-                                                                                    <AccordionDetails>
-                                                                                        <div className='expand'>
-                                                                                            <div className='flexCol'>
-                                                                                                {
-                                                                                                    data.nodes.length === 0 ? "" :
-                                                                                                        <>
-                                                                                                            {data.nodes.map((data, index) => (
-                                                                                                                <CheckComponent index={index} data={data} />
-                                                                                                            ))}
-                                                                                                        </>
-                                                                                                }
-                                                                                            </div>
-
+                                                                            <Accordion
+                                                                                expanded={innerChildPanels.includes(index)}
+                                                                                onChange={() => handlePanelClick(index, innerChildPanels, setInnerChildPanels)}
+                                                                                style={{
+                                                                                    background: innerChildPanels.includes(index) ? "#0F1332" : "#0F1332",
+                                                                                    color: "white",
+                                                                                    boxShadow: 'none',
+                                                                                    borderRadius: "0",
+                                                                                }}
+                                                                            >
+                                                                                <Summary data={data} index={index} />
+                                                                                <AccordionDetails>
+                                                                                    <div className='expand'>
+                                                                                        <div className='flexCol'>
+                                                                                            {data.nodes.length === 0 ? null : (
+                                                                                                <>
+                                                                                                    {data.nodes.map((data, index) => (
+                                                                                                        <CheckComponent index={index} data={data} />
+                                                                                                    ))}
+                                                                                                </>
+                                                                                            )}
                                                                                         </div>
-                                                                                    </AccordionDetails>
-                                                                                </Accordion>
-                                                                            ))
-                                                                        }
-                                                                    </>}
+                                                                                    </div>
+                                                                                </AccordionDetails>
+                                                                            </Accordion>
+                                                                        ))}
+                                                                    </>
+                                                                )}
                                                             </div>
                                                         </div>
                                                     </AccordionDetails>
