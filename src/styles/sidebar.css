@@ -1,0 +1,64 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #070927;
+}
+.sidebar {
+  width: 250px;
+  height: 99.6vh;
+  border-right: 1px solid #141732;
+}
+.side_upper {
+  padding: 0px 64px;
+  height: 50px;
+  background: #141732;
+}
+.side_upper > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.side_upper h4 {
+  color: white;
+  margin-top: 0px;
+  padding-top: 14px;
+}
+.side_below {
+  margin-top: 20px;
+}
+.innerSide {
+  width: 100%;
+}
+.flexCol,
+.nested-flexCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.expand,
+.nested-expand {
+  margin-left: 10px;
+  padding-left: 8px;
+  border-left: 1px solid #3f445d;
+}
+.checkbox {
+  margin-right: 8px;
+}
+
+.MuiCheckbox-root.Mui-checked{
+    color: #1FA03D !important;
+}
+.checkbox {
+  color: #ffffff; 
+}
+
+.checkbox.checked {
+  color: #ff0000; 
+}
+.MuiAccordionSummary-root {
+  min-height: 50px !important;
+}
+.MuiAccordionSummary-content {
+  margin: 10px 0px !important;
+}
