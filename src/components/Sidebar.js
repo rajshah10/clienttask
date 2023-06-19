@@ -6,7 +6,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
-import CheckBoxOutlineBlankOutlinedIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
 import { data } from '../constants';
 import { Checkbox } from '@mui/material';
 const Sidebar = () => {
