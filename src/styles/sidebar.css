@@ -4,12 +4,12 @@ body {
   background: #070927;
 }
 .sidebar {
-  width: 250px;
+  width: 350px;
   height: 99.6vh;
   border-right: 1px solid #141732;
 }
 .side_upper {
-  padding: 0px 64px;
+  padding: 0px 104px;
   height: 50px;
   background: #141732;
 }
@@ -38,7 +38,7 @@ body {
 }
 .expand,
 .nested-expand {
-  margin-left: 10px;
+  margin-left: 32px;
   padding-left: 8px;
   border-left: 1px solid #3f445d;
 }
@@ -46,19 +46,23 @@ body {
   margin-right: 8px;
 }
 
-.MuiCheckbox-root.Mui-checked{
-    color: #1FA03D !important;
+.MuiCheckbox-root.Mui-checked {
+  color: #1fa03d !important;
 }
 .checkbox {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .checkbox.checked {
-  color: #ff0000; 
+  color: #ff0000;
 }
+
 .MuiAccordionSummary-root {
-  min-height: 50px !important;
+  min-height: 30px !important;
 }
 .MuiAccordionSummary-content {
   margin: 10px 0px !important;
+}
+.MuiAccordionDetails-root{
+    padding:8px 0px !important
 }

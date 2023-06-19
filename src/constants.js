@@ -1,63 +1,86 @@
-export const data =  [
+export const data = [
     {
-      "key": "mammal",
-      "label": "Mammal",
-      "nodes": [
-        {
-          "key": "canidae",
-          "label": "Canidae",
-          "nodes": [
+        key: "pointof",
+        label: "Point Of Interests",
+        nodes: [
             {
-              "key": "dog",
-              "label": "Dog",
-              "nodes": [],
-              "url": "https://www.google.com/search?q=dog"
-            },
-            {
-              "key": "fox",
-              "label": "Fox",
-              "nodes": [],
-              "url": "https://www.google.com/search?q=fox"
-            },
-            {
-              "key": "wolf",
-              "label": "Wolf",
-              "nodes": [],
-              "url": "https://www.google.com/search?q=wolf"
+                key: "poi",
+                label: "poi",
+                nodes: [
+                    {
+                        key: "district",
+                        label: "District",
+                        nodes: [],
+                        url: "https://www.google.com/search?q=dog"
+                    },
+                    {
+                        key: "schools",
+                        label: "schools",
+                        nodes: [],
+                        url: "https://www.google.com/search?q=fox"
+                    },
+                    {
+                        key: "cp",
+                        label: "Capex Projects",
+                        nodes: [],
+                        url: "https://www.google.com/search?q=wolf"
+                    }
+                ],
+                url: "https://www.google.com/search?q=canidae"
             }
-          ],
-          "url": "https://www.google.com/search?q=canidae"
-        }
-      ],
-      "url": "https://www.google.com/search?q=mammal"
+        ],
+        url: "https://www.google.com/search?q=mammal"
     },
     {
-      "key": "reptile",
-      "label": "Reptile",
-      "nodes": [
-        {
-          "key": "squamata",
-          "label": "Squamata",
-          "nodes": [
+        key: "challenges",
+        label: "Challenges",
+        nodes: [
             {
-              "key": "lizard",
-              "label": "Lizard",
-              "url": "https://www.google.com/search?q=lizard"
-            },
-            {
-              "key": "snake",
-              "label": "Snake",
-              "url": "https://www.google.com/search?q=snake"
-            },
-            {
-              "key": "gekko",
-              "label": "Gekko",
-              "url": "https://www.google.com/search?q=gekko"
+                key: "challenge",
+                label: "challenge",
+                nodes: [
+                    {
+                        key: "2022",
+                        label: "2022",
+                        nodes: [
+                            {
+                                key: "highways",
+                                label: "Highways",
+                                nodes: [
+                                    {
+                                        key: "morning",
+                                        label: "Morning Congestion",
+                                    },
+                                    {
+                                        key: "morning",
+                                        label: "Morning Congestion",
+                                    }
+                                ]
+                            },
+                            {
+                                key: "junctions",
+                                label: "Junctions",
+                                nodes: []
+                            },
+                            {
+                                key: "bridges",
+                                label: "Bridges",
+                                nodes: []
+                            },
+
+                        ],
+                        url: "https://www.google.com/search?q=dog"
+                    },
+                    {
+                        key: "2025",
+                        label: "2025",
+                        nodes: [],
+                        url: "https://www.google.com/search?q=fox"
+                    },
+                ],
+                url: "https://www.google.com/search?q=canidae"
             }
-          ],
-          "url": "https://www.google.com/search?q=squamata"
-        }
-      ],
-      "url": "https://www.google.com/search?q=reptile"
-    }
-  ]
+        ],
+        url: "https://www.google.com/search?q=mammal"
+    },
+]
