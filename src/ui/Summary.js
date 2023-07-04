@@ -5,7 +5,7 @@ const Summary = (props) => {
     return (
         <AccordionSummary
             className="asummary"
-            expandIcon={props.data.nodes.length === 0 ? "" : <ExpandMoreIcon style={{ color: "white" }} />}
+            expandIcon={props?.data?.nodes?.length === 0 ? "" : <ExpandMoreIcon style={{ color: "white" }} />}
             aria-controls={`panel${props.innerInd}a-content`}
             id={`panel${props.innerInd}a-header`}
         >
