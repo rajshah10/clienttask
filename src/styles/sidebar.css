@@ -4,7 +4,7 @@ body {
   background: #070927;
 }
 .sidebar {
-  width: 350px;
+  width: fit-content;
   height: 99.6vh;
   border-right: 1px solid #141732;
 }
@@ -63,6 +63,6 @@ body {
 .MuiAccordionSummary-content {
   margin: 10px 0px !important;
 }
-.MuiAccordionDetails-root{
-    padding:8px 0px !important
+.MuiAccordionDetails-root {
+  padding: 8px 0px !important;
 }
